@@ -1,0 +1,294 @@
+// $color: #f00;
+
+// body{
+//     color: #000;
+// }
+// h1{
+//     color: $color;
+// }
+
+.l-header {
+
+
+
+
+    &__logo {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        font-size: 20px;
+
+
+    }
+
+    &__lstbox {
+
+        
+        justify-content: space-between;
+        display: flex;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+
+    }
+
+    &__lst {
+
+        width: 33%;
+        text-align: center;
+        background-color: #27bdae;
+    }
+}
+
+.c-pic {
+    width: 80%;
+    margin: 0 auto;
+
+    &__top {
+
+
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 50px;
+
+
+    }
+
+    &__lt {
+
+        margin: 0 auto;
+        width: 32%;
+        margin-bottom: 70px;
+        overflow: hidden;
+
+
+    }
+
+    &__pho {
+
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        a {
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+
+        }
+
+
+        a:hover img {
+            transform: scale(1.2);
+            transition: transform .2s;
+
+
+
+
+        }
+
+        img {
+            margin: 0 auto;
+            display: block;
+
+        }
+    }
+
+
+
+
+    &__pl {
+
+        transform: skewX(150deg);
+        overflow: hidden;
+        text-align: center;
+        border-radius: 4%;
+        border: 3px solid red;
+        box-shadow: 3px black;
+        text-decoration: none;
+        width: 80%;
+        margin: 0 auto;
+
+
+        a {
+
+            border: none;
+            padding: 10px;
+            height: 100%;
+            color: black;
+            display: block;
+            font-size: 16px;
+            text-decoration: none;
+
+
+
+        }
+
+        a:hover {
+            background-color: #71e675;
+            color: white;
+            transition: all 1s ease;
+
+
+        }
+    }
+
+
+
+    &__bt {
+
+        margin-top: 50px;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+
+
+    }
+
+    &__lt {
+
+        margin: 0 auto;
+        width: 32%;
+
+        img {
+
+            width: 100%;
+            text-align: center;
+
+        }
+
+    }
+}
+
+.botm {
+
+    margin: 50px;
+
+    &__box{
+        &.show{
+            .botm__card__show{
+
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+
+
+            }
+
+            .botm__card{
+                h3::after{
+                    content: "-";
+                    
+
+                }
+            }
+        }
+    }
+
+    &__card {
+
+        display: flex;
+        background-color: #27bdae;
+        justify-content: space-between;
+        padding: 10px;
+        position: relative;
+
+        h3 {
+            color: black;
+            font-size: 20px;
+        }
+
+        h3::after{
+            content: "+";
+            position: absolute;
+            right: 20px;
+        }
+        &__show{
+        
+            visibility: hidden;
+            height: 0;
+            opacity: 0;
+    
+        }
+    }
+
+    
+}
+
+.ft {
+    text-align: center;
+    background-color: #000;
+
+    address {
+        color: white;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .c-pic {
+        width: 100%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .c-pic {
+        width: 100%;
+
+        &__top {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        &__bt {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__lt {
+            width: 48%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .c-pic {
+        width: 100%;
+        margin: 0 auto;
+
+        &__pho {
+            img {
+                width: 100%;
+
+            }
+        }
+
+        &__bt {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__lt {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+    }
+
+}
